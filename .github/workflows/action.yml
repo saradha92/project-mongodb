@@ -8,6 +8,6 @@ jobs:
   runs-on: ubuntu-latest
   environment: test
   steps:
-   - uses: actions/core@v1
+   - uses: actions/checkout@v1
    
      
