@@ -9,6 +9,6 @@ jobs:
   environment: test
   steps:
    - name: connect to mongodb
-     run: npm start db.js
+     run: actions/checkout@v1
    
      
