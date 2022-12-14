@@ -5,6 +5,8 @@ on:
     - master
 jobs:
  build:
-  - name: connect to mongodb
-    uses: actions/checkout@v3
+  runs-on: ubuntu-latest
+  steps:
+   - name: connect to mongodb
+     uses: actions/checkout@v3
      
