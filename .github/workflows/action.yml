@@ -15,6 +15,7 @@ jobs:
      MONGODB_PASSWD: ${{ secrets.MONGODB_PASSWD }}
      MONGODB_URL: ${{ secrets. MONGODB_URL }}
      url: mongodb+srv://{$MONGODB_USERNAME}:{$MONGODB_PASSWD}@{$MONGODB_URL}/?retryWrites=true&w=majority 
+     shell: bash
   - name: Run Server
     run: | 
      echo $url
