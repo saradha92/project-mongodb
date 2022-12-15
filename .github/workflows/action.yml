@@ -32,7 +32,7 @@ jobs:
      let mongo = mongo::init(&config).await.expect("Failed to init mongo");
  
   - name: Output information 
-    run: echo " ... "
+    run: cat  /home/runner/.npm/_logs/2022-12-15T08_44_13_911Z-debug-0.log
      
    
      
