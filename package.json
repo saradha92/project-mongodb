@@ -6,8 +6,9 @@
   "author": "saradha",
   "license": "MIT",
   "scripts": {
-    "start": app.js
+    "start": "app.js"
   }
+  
   "dependencies": {
     "express": "^4.17.1",
     "body-parser": "1.19.0"
