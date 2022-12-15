@@ -11,15 +11,18 @@ jobs:
     uses: actions/checkout@v1
     
   - name: Run Server
+    id: server
     run: | 
      echo ${{ secrets.MONGODB_USERNAME }} >> secrets.txt
      echo ${{ secrets.MONGODB_PASSWD }} >> secrets.txt
      echo ${{ secrets.MONGODB_URL }} >> secrets.txt
      echo "hello" >> secrets.txt
-     npm start on mongodb+srv://${{ secrets.MONGODB_USERNAME }}:${{ secrets.MONGODB_PASSWD }}@${{ secrets.MONGODB_URL }}/?retryWrites=true&w=majority
+     test = npm start on mongodb+srv://${{ secrets.MONGODB_USERNAME }}:${{ secrets.MONGODB_PASSWD }}@${{ secrets.MONGODB_URL }}/?retryWrites=true&w=majority 
+  
  
   - name: Output information 
-    run: cat secrets.txt
+    if: ${{ steps.server.outputs.test }}
+    run: echo $test
      
    
      
