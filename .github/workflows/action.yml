@@ -8,6 +8,12 @@ jobs:
   runs-on: ubuntu-latest
   environment: test
   steps:
-   - uses: actions/checkout@v1
+   - name: get code
+     uses: actions/checkout@v1
+   - name: Run Server
+     run: npm start on $url
+   - name: Output information
+     run: echo "Connected"
+     
    
      
