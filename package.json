@@ -6,7 +6,7 @@
   "author": "saradha",
   "license": "MIT",
   "scripts": {
-    "start": "node db.js"
+    "start": {"npm": db.js}
   }, 
   
   "dependencies": {
