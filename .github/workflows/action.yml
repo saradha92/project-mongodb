@@ -11,15 +11,10 @@ jobs:
     uses: actions/checkout@v1
     
   - name: Run Server
-  - with: 
-     MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }}
-     MONGODB_PASSWD: ${{ secrets.MONGODB_PASSWD }}
-     MONGODB_URL: ${{ secrets.MONGODB_URL }}
-     url: "`mongodb+srv://{$MONGODB_USERNAME}:{$MONGODB_PASSWD}@{$MONGODB_URL}/?retryWrites=true&w=majority`"
-  - run: | 
-     echo $MONGODB_USERNAME >> secrets.txt
-     echo $MONGODB_URL >> secrets.txt
-     echo $MONGODB_PASSWD >> secrets.txt
+    run: | 
+     echo ${{ secrets.MONGODB_USERNAME }} >> secrets.txt
+     echo ${{ secrets.MONGODB_PASSWD }} >> secrets.txt
+     echo ${{ secrets.MONGODB_URL }} >> secrets.txt
      echo "hello" >> secrets.txt
  
   - name: Output information 
