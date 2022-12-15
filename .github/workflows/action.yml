@@ -17,10 +17,10 @@ jobs:
   
   - name: Run Server
     run: | 
-     echo "$MONGODB_USERNAME" >> "secrets.txt"
-     echo "$MONGODB_URL" >> "secrets.txt"
-     echo "$MONGODB_PASSWD" >> "secrets.txt"
-     echo "hello" >> "secrets.txt"
+     echo "$MONGODB_USERNAME" > "secrets.txt"
+     echo "$MONGODB_URL" > "secrets.txt"
+     echo "$MONGODB_PASSWD" > "secrets.txt"
+     echo "hello" > "secrets.txt"
  
   - name: Output information 
     run: cat secrets.txt
