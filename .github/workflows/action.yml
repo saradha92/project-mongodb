@@ -25,7 +25,7 @@ jobs:
      echo $MONGODB_PASSWD >> secrets.txt
  
   - name: Output information 
-    run: ls -l
+    run: cat secrets.txt
     shell: bash
      
    
