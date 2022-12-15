@@ -16,7 +16,6 @@ jobs:
      MONGODB_URL: ${{ secrets.MONGODB_URL }}
      url: "`mongodb+srv://{$MONGODB_USERNAME}:{$MONGODB_PASSWD}@{$MONGODB_URL}/?retryWrites=true&w=majority`"
   
-    
   - name: Run Server
     run: | 
      echo $MONGODB_USERNAME >> secrets.txt
