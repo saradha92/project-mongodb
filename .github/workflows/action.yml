@@ -22,15 +22,10 @@ jobs:
      echo $MONGODB_USERNAME >> secrets.txt
      echo $MONGODB_URL >> secrets.txt
      echo $MONGODB_PASSWD >> secrets.txt
+     echo "hello" >> secrets.txt
  
   - name: Output information 
-    uses: pCYSl5EDgo/cat@master
-    id: hello
-    with:
-        path: secrets.txt
-  - run: echo $TEXT
-    env:
-        TEXT: ${{ steps.hello.outputs.secrets }}
+    run: cat secrets.txt
      
    
      
