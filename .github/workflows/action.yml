@@ -8,14 +8,14 @@ jobs:
   runs-on: ubuntu-latest
   environment: test
   steps:
-  - shell: bash
+  - name: get code
+    uses: actions/checkout@v1  
     env:
      MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }}
      MONGODB_PASSWD: ${{ secrets.MONGODB_PASSWD }}
      MONGODB_URL: ${{ secrets.MONGODB_URL }}
      url: mongodb+srv://{$MONGODB_USERNAME}:{$MONGODB_PASSWD}@{$MONGODB_URL}/?retryWrites=true&w=majority 
-  - name: get code
-    uses: actions/checkout@v1  
+  
     
   - name: Run Server
     run: | 
@@ -23,6 +23,7 @@ jobs:
      echo $MONGODB_USERNAME >> secrets.txt
      echo $MONGODB_URL >> secrets.txt
      echo $MONGODB_PASSWD >> secrets.txt
+  - shell: bash   
   - name: Output information 
     run: cat secrets.txt
      
