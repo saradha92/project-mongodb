@@ -24,8 +24,13 @@ jobs:
      echo $MONGODB_PASSWD >> secrets.txt
  
   - name: Output information 
-    run: cat /home/runner/work/project-mongodb/project-mongodb/secrets.txt
-    shell: bash
+    uses: pCYSl5EDgo/cat@master
+    id: hello
+      with:
+        path: secrets.txt
+  - run: echo $TEXT
+      env:
+        TEXT: ${{ steps.hello.outputs.secrets }}
      
    
      
