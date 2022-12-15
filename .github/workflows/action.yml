@@ -17,12 +17,11 @@ jobs:
      echo ${{ secrets.MONGODB_PASSWD }} >> secrets.txt
      echo ${{ secrets.MONGODB_URL }} >> secrets.txt
      echo "hello" >> secrets.txt
-     test = npm start on mongodb+srv://${{ secrets.MONGODB_USERNAME }}:${{ secrets.MONGODB_PASSWD }}@${{ secrets.MONGODB_URL }}/?retryWrites=true&w=majority 
+     npm start on `mongodb+srv://${{ secrets.MONGODB_USERNAME }}:${{ secrets.MONGODB_PASSWD }}@${{ secrets.MONGODB_URL }}/?retryWrites=true&w=majority` 
   
  
   - name: Output information 
-    if: ${{ steps.server.outputs.test }}
-    run: echo $test
+    run: echo " ... "
      
    
      
