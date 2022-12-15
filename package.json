@@ -6,7 +6,7 @@
   "author": "saradha",
   "license": "MIT",
   "scripts": {
-    "start": db.js
+    "start": app.js
   }
   "dependencies": {
     "express": "^4.17.1",
