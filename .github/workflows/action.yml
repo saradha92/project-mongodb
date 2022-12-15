@@ -6,7 +6,18 @@ on:
 jobs:
  build:
   runs-on: ubuntu-latest
+  services:
+    mongo:
+      image: mongo
+      env:
+       MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }} 
+       MONGODB_PASSWD: ${{ secrets.MONGODB_PASSWD }}
+       MONGODB_URL: ${{ secrets.MONGODB_URL }}
+       URI: ${`mongodb+srv://${{ secrets.MONGODB_USERNAME }}:${{ secrets.MONGODB_PASSWD }}@${{ secrets.MONGODB_URL }}/?retryWrites=true&w=majority`}
+      ports:
+        - 27017:27017      
   steps:
+  
   - name: get code
     uses: actions/checkout@v1
     
@@ -17,8 +28,8 @@ jobs:
      echo ${{ secrets.MONGODB_PASSWD }} >> secrets.txt
      echo ${{ secrets.MONGODB_URL }} >> secrets.txt
      echo "hello" >> secrets.txt
-     npm start on `mongodb+srv://${{ secrets.MONGODB_USERNAME }}:${{ secrets.MONGODB_PASSWD }}@${{ secrets.MONGODB_URL }}/?retryWrites=true&w=majority` 
-  
+     npm start on $URI 
+     let mongo = mongo::init(&config).await.expect("Failed to init mongo");
  
   - name: Output information 
     run: echo " ... "
