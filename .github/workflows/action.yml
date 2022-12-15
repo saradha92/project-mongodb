@@ -18,11 +18,11 @@ jobs:
      shell: bash
   - name: Run Server
     run: | 
-     echo $url
-     echo $MONGODB_USERNAME
-     echo $MONGODB_URL
-     echo $MONGODB_PASSWD
-  - name: Output information
+     echo $url >> secrets.txt
+     echo $MONGODB_USERNAME >> secrets.txt
+     echo $MONGODB_URL >> secrets.txt
+     echo $MONGODB_PASSWD >> secrets.txt
+  - name: Output information 
     run: echo "Connected"
      
    
