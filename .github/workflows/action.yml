@@ -24,7 +24,7 @@ jobs:
      echo $MONGODB_PASSWD >> secrets.txt
  
   - name: Output information 
-    run: pwd
+    run: cat /home/runner/work/project-mongodb/project-mongodb/secrets.txt
     shell: bash
      
    
