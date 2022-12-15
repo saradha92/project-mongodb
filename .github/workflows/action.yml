@@ -16,7 +16,7 @@ jobs:
      MONGODB_URL: ${{ secrets. MONGODB_URL }}
      url: ${ mongo $"mongodb+srv://${MONGODB_USERNAME}:${MONGODB_PASSWD}@${MONGODB_URL}/?retryWrites=true&w=majority"}
   - name: Run Server
-    run: npm start on $url
+    run: echo " $url "
   - name: Output information
     run: echo "Connected"
      
