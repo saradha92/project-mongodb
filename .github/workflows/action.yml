@@ -19,7 +19,6 @@ jobs:
     
   - name: Run Server
     run: | 
-     echo $url >> secrets.txt
      echo $MONGODB_USERNAME >> secrets.txt
      echo $MONGODB_URL >> secrets.txt
      echo $MONGODB_PASSWD >> secrets.txt
