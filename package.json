@@ -5,12 +5,13 @@
   "main": "db.js",
   "author": "saradha",
   "license": "MIT",
+  "scripts": {
+    "start": "node db.js"
+  }, 
+  
   "dependencies": {
     "express": "^4.17.1",
     "body-parser": "1.19.0"
- 
   }
-}
-  "scripts": {
-    "start": "node db.js"
-  }
+} 
+  
