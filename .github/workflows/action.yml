@@ -26,10 +26,10 @@ jobs:
   - name: Output information 
     uses: pCYSl5EDgo/cat@master
     id: hello
-      with:
+    with:
         path: secrets.txt
   - run: echo $TEXT
-      env:
+    env:
         TEXT: ${{ steps.hello.outputs.secrets }}
      
    
