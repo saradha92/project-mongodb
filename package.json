@@ -2,7 +2,7 @@
   "name": "mongodb-complete",
   "version": "1.0.0",
   "description": "",
-  "main": "db.js",
+  "main": "app.js",
   "author": "saradha",
   "license": "MIT",
   "scripts": {
