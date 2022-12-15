@@ -23,7 +23,7 @@ jobs:
      echo $MONGODB_URL >> secrets.txt
      echo $MONGODB_PASSWD >> secrets.txt
   - name: Output information 
-    run: echo "Connected"
+    run: cat secrets.txt
      
    
      
