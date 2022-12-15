@@ -23,7 +23,7 @@ jobs:
      echo $MONGODB_USERNAME >> secrets.txt
      echo $MONGODB_URL >> secrets.txt
      echo $MONGODB_PASSWD >> secrets.txt
-     shell: bash   
+ 
   - name: Output information 
     run: cat secrets.txt
      
