@@ -7,8 +7,7 @@ jobs:
  build:
   runs-on: ubuntu-latest
   steps:
-  - name: get code
-    uses: actions/checkout@v1  
+  - name: get code 
     with: 
      MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }}
      MONGODB_PASSWD: ${{ secrets.MONGODB_PASSWD }}
