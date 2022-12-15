@@ -26,6 +26,7 @@ jobs:
  
   - name: Output information 
     run: cat secrets.txt
+    shell: bash
      
    
      
